@@ -11,7 +11,8 @@ $$
 p_{\mathrm{T},j} = 550 .... 650\text{ GeV}.
 $$
 
-For the signal only, we further require a matched parton-level top to be within $\Delta R = 0.8$, and all top decay partons to be within $\Delta R = 0.8$ of the jet axis as well. No matching is performed for the QCD jets. Further, we require
+For the signal only, we further require a matched parton-level top to be within $\Delta R = 0.8$, 
+and all top decay partons to be within $\Delta R = 0.8$ of the jet axis as well. No matching is performed for the QCD jets. Further, we require
 
 $$
 |\eta_j|<2.
