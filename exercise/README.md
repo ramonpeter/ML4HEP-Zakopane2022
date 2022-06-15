@@ -1,6 +1,6 @@
 # Top-Tagging
 
-The task of this exercise is to write a custom CNN model that is able to distinguish top jets from
+The task of this exercise is to write a custom neural network model that is able to distinguish top jets from
 mixed quark-gluon jets.
 
 ## Data Set
