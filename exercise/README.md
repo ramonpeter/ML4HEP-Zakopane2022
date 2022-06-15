@@ -19,15 +19,23 @@ $$
 
 The constituents are extracted through the Delphes energy-flow algorithm, and the 4-momenta of the leading 200 constituents are stored. For jets with less than 200 constituents we simply add zero-vectors.
 
+### Preprocessing
+
+We perform a specific preprocessing before pixelating the image. First, we center and rotate the jet according to its $p_\mathrm{T}$-weighted centroid and principal axis. Then we flip horizontally and vertically so that the maximum intensity is in the upper right quadrant. Finally, we pixelate the image with $p_\mathrm{T}$ as the pixel intensity, and normalize it to unit total intensity.
+
 ### Size
 
-The data set consists of 1 million signal and 1 million background jets. They are divided into three samples: training with 600k signal and background jets each, validation with 200k signal and background jets each, and testing with 200k signal and 200k background jets.
+The preprocessd data set consists of 80k signal and 80k background jets. They are divided into three samples: training with 50k signal and background jets each, validation with 15k signal and background jets each, and testing with 15k signal and 15k background jets.
+
+NOTE: There is more raw data, however the Colab input-pipeline does not allow to use more jet images.
 
 ### Download data
 
-The data is downloaded by executing the corresponding line in "exercise.ipynb":
+The data is downloaded automatically by executing the corresponding line in `top_tagging.ipynb`:
 
+```Jupyter Notebook
+!curl https://www.dropbox.com/s/abd8xntlaorzzvy/train_img.h5?dl=1 -L -o train_img.h5
+!curl https://www.dropbox.com/s/cmxe03vjfzhm70i/val_img.h5?dl=1 -L -o val_img.h5
+!curl https://www.dropbox.com/s/csxe65ykvmomxcs/test_img.h5?dl=1 -L -o test_img.h5
+```
 
-## Preprocessing
-
-We perform a specific preprocessing before pixelating the image. First, we center and rotate the jet according to its $p_\mathrm{T}$-weighted centroid and principal axis. Then we flip horizontally and vertically so that the maximum intensity is in the upper right quadrant. Finally, we pixelate the image with $p_\mathrm{T}$ as the pixel intensity, and normalize it to unit total intensity.
