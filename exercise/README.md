@@ -42,3 +42,8 @@ The data is downloaded automatically by executing the corresponding line in `top
 !curl https://www.dropbox.com/s/csxe65ykvmomxcs/test_img.h5?dl=1 -L -o test_img.h5
 ```
 
+## References
+
+[1] Macaluso and Shih, "Pulling Out All the Tops with Computer Vision and Deep Learning", [1803.00107 [hep-ph]](https://arxiv.org/abs/1803.00107)
+
+[2] Butter et al., "The Machine Learning Landscape of Top Taggers", [1902.09914 [hep-ph]](https://arxiv.org/abs/1902.09914)
