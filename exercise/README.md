@@ -3,6 +3,8 @@
 The task of this exercise is to write a custom neural network model that is able to distinguish top jets from
 mixed quark-gluon jets.
 
+![Jet Images](jet_image.png)
+
 ## Data Set
 
 The top signal and mixed quark-gluon background jets are produced with Pythia8 with its default tune for a center-of-mass energy of 14 TeV and ignoring multiple interactions and pile-up. For a simplified detector simulation Delphes with the default ATLAS detector card was used. The fat jet is then defined through the anti-kT algorithm in FastJet with $R = 0.8$. We only consider the leading jet in each event and require
