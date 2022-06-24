@@ -3,8 +3,6 @@
 The task of this exercise is to write a custom neural network model that is able to distinguish top jets from
 mixed quark-gluon jets.
 
-![Jet Images](jet_image.png)
-
 ## Data Set
 
 The top signal and mixed quark-gluon background jets are produced with Pythia8 with its default tune for a center-of-mass energy of 14 TeV and ignoring multiple interactions and pile-up. For a simplified detector simulation Delphes with the default ATLAS detector card was used. The fat jet is then defined through the anti-kT algorithm in FastJet with $R = 0.8$. We only consider the leading jet in each event and require
@@ -24,7 +22,9 @@ The constituents are extracted through the Delphes energy-flow algorithm, and th
 
 ### Preprocessing
 
-We perform a specific preprocessing before pixelating the image. First, we center and rotate the jet according to its $p_\mathrm{T}$-weighted centroid and principal axis. Then we flip horizontally and vertically so that the maximum intensity is in the upper right quadrant. Finally, we pixelate the image with $p_\mathrm{T}$ as the pixel intensity, and normalize it to unit total intensity.
+We perform a specific preprocessing before pixelating the image. First, we center and rotate the jet according to its $p_\mathrm{T}$-weighted centroid and principal axis. Then we flip horizontally and vertically so that the maximum intensity is in the upper right quadrant. Finally, we pixelate the image with $p_\mathrm{T}$ as the pixel intensity, and normalize it to unit total intensity. We end up with 40 x 40 jet images as seen below.
+
+![Jet Images](jet_image.png)
 
 ### Size
 
@@ -42,3 +42,8 @@ The data is downloaded automatically by executing the corresponding line in `top
 !curl https://www.dropbox.com/s/csxe65ykvmomxcs/test_img.h5?dl=1 -L -o test_img.h5
 ```
 
+## References
+
+[1] Macaluso and Shih, "Pulling Out All the Tops with Computer Vision and Deep Learning", [1803.00107 [hep-ph]](https://arxiv.org/abs/1803.00107)
+
+[2] Butter et al., "The Machine Learning Landscape of Top Taggers", [1902.09914 [hep-ph]](https://arxiv.org/abs/1902.09914)
